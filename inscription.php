@@ -38,21 +38,21 @@ if(!empty($_POST['email'])
     //Hachage du mot de passe
     $pass_hash = password_hash($password, PASSWORD_DEFAULT);
     
-    //On récupère le resultat de notre requete dans la variable $result
-    $result = $idcom->query($requete);
     
     $requete = "INSERT INTO membres(email, pseudo, password) VALUES ('$email', '$pseudo', '$pass_hash') ";
 
     $result = $idcom->query($requete);
      
     if($result){
-        echo "Bravo vous êtes bien inscrit";
-    }else { echo "Désolé vous n'êtes inscrit";}
+        echo "Bravo vous êtes bien inscrit
+        <a href=\"connexion.php\">Connexion</a>";
+
+    }else { echo "Désolé vous n'êtes inscrit <a href=\"connexion.php\">Connexion</a>";}
     
     $idcom->close();
 
 
-}else { echo "Merci de bien rentrer les bonnes informations";}
+}else { echo "Merci de bien rentrer les bonnes informations <a href=\"connexion.php\">Connexion</a>";}
 
     ?>
     

@@ -66,7 +66,7 @@ echo "</table>";
 
 ?>
 <br/>
-<a href="imprimer-facture.php">Créer une facture</a>
+<a href="create-facture.php">Créer une facture</a>
 </body>
 </html>
 <?php
